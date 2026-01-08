@@ -45,10 +45,10 @@ print("-" * 80)
 try:
     # Get flights using Bright Data mode
     result = get_flights_from_filter(filter, mode="bright-data")
-    
+
     print(f"Current price: {result.current_price}")
     print(f"Found {len(result.flights)} flights\n")
-    
+
     # Display flight results
     for i, flight in enumerate(result.flights, 1):
         print(f"Flight {i}:")
@@ -63,7 +63,7 @@ try:
         if flight.is_best:
             print("  ⭐ Best flight")
         print()
-        
+
 except Exception as e:
     print(f"Error occurred: {type(e).__name__}: {e}")
     import traceback
